@@ -1,0 +1,73 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>res/icon/tower.ico</file>
+    </qresource>
+    <qresource prefix="/character">
+        <file>res/characters/hero.png</file>
+        <file>res/characters/fixedshop.png</file>
+        <file>res/characters/shopkeeper.png</file>
+        <file>res/characters/thief.png</file>
+        <file>res/characters/witcher.png</file>
+    </qresource>
+    <qresource prefix="/background">
+        <file>res/background/mainmenu.png</file>
+        <file>res/background/statusbg.png</file>
+        <file>res/background/title-en.PNG</file>
+        <file>res/background/title-zh.PNG</file>
+        <file>res/background/ingamebg.png</file>
+        <file>res/characters/heroprofile.png</file>
+        <file>res/background/tab2.png</file>
+        <file>res/background/dialog.png</file>
+        <file>res/background/selectbg.png</file>
+        <file>res/background/dilaoguebox.png</file>
+        <file>res/background/dialogbg.png</file>
+    </qresource>
+    <qresource prefix="/button">
+        <file>res/button/buttonStock1.png</file>
+        <file>res/button/buttonStock1d.png</file>
+        <file>res/button/buttonStock1h.png</file>
+        <file>res/background/tab.png</file>
+    </qresource>
+    <qresource prefix="/enemy">
+        <file>res/enemy/bat.png</file>
+        <file>res/enemy/boss.png</file>
+        <file>res/enemy/eitleguard.png</file>
+        <file>res/enemy/geernslime.png</file>
+        <file>res/enemy/mummy.png</file>
+        <file>res/enemy/normalguard.png</file>
+        <file>res/enemy/redslime.png</file>
+        <file>res/enemy/skeletonleader.png</file>
+        <file>res/enemy/skeletonwarrior.png</file>
+        <file>res/enemy/wizard.png</file>
+        <file>res/enemy/wizardguard.png</file>
+    </qresource>
+    <qresource prefix="/item">
+        <file>res/item/bluekey.png</file>
+        <file>res/item/bluepotion.png</file>
+        <file>res/item/coin.png</file>
+        <file>res/item/greengem.png</file>
+        <file>res/item/heart.png</file>
+        <file>res/item/key.png</file>
+        <file>res/item/redgem.png</file>
+        <file>res/item/redkey.png</file>
+        <file>res/item/redpotion.png</file>
+        <file>res/item/shield.png</file>
+        <file>res/item/sword.png</file>
+        <file>res/item/yelllowkey.png</file>
+    </qresource>
+    <qresource prefix="/map">
+        <file>res/map/bluedoor.png</file>
+        <file>res/map/downstairs.png</file>
+        <file>res/map/floor.png</file>
+        <file>res/map/jaildoor.png</file>
+        <file>res/map/reddoor.png</file>
+        <file>res/map/roof.png</file>
+        <file>res/map/roof1.png</file>
+        <file>res/map/shopleft.png</file>
+        <file>res/map/shopright.png</file>
+        <file>res/map/cyandoor.png</file>
+        <file>res/map/upstairs.png</file>
+        <file>res/map/wall.png</file>
+        <file>res/map/yellowdoor.png</file>
+    </qresource>
+</RCC>
