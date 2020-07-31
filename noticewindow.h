@@ -5,6 +5,7 @@
 #include <QString>
 #include <QTimer>
 #include "variables.h"
+#include"enum.h"
 
 namespace Ui {
 class noticewindow;

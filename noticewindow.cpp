@@ -7,6 +7,7 @@ noticewindow::noticewindow(QWidget *parent) :
 {
     ui->setupUi(this);
     timer_close = new QTimer(this);
+    connect(timer_close,SIGNAL(timeout()),this,SLOT(on_timer_close()));
 }
 
 noticewindow::~noticewindow()
@@ -25,5 +26,6 @@ void noticewindow::display_info(QString info)
 void noticewindow::on_timer_close()
 {
     timer_close->stop();
-    hide();
+    this->close();
+    var_global.game_status = NORMAL;
 }

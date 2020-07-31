@@ -14,7 +14,7 @@ gamegrapic::gamegrapic(QWidget *parent) :
 
     timer_update = new QTimer(this);
     timer_cut = new QTimer(this);
-    timer_battle = new QTimer(this);
+    //timer_battle = new QTimer(this);
     timer_pickupitem = new QTimer(this);
     timer_notice = new QTimer(this);
 
@@ -30,12 +30,14 @@ gamegrapic::gamegrapic(QWidget *parent) :
     pixmap_items = new QGraphicsPixmapItem*[X*Y];
 
     connect(timer_update,SIGNAL(timeout()),this,SLOT(on_timer_update_triggered()));
-    connect(BattleWindow,SIGNAL(stop_battletimer_event()),this,SLOT(stop_battle_timer()));
+    //connect(BattleWindow,SIGNAL(stop_battletimer_event()),this,SLOT(stop_battle_timer()));
     connect(BattleWindow,SIGNAL(call_notices_event()),this,SLOT(notice_after_battle()));
     //connect(timer_cut,SIGNAL(timeout()),this,SLOT(on_timer_cut_triggered()));
-    connect(timer_battle,SIGNAL(timeout()),BattleWindow,SLOT(start_battle()));
+    //connect(timer_battle,SIGNAL(timeout()),BattleWindow,SLOT(start_battle()));
     //connect(timer_notice,SIGNAL(timeout()),this,SLOT(on_timer_notice_triggered()));
     //connect(timer_pickupitem,SIGNAL(timeout()),this,SLOT(on_timer_pickupitem_triggered();));
+
+    this->grabKeyboard();
 }
 
 gamegrapic::~gamegrapic()
@@ -107,15 +109,15 @@ void gamegrapic::update_grapic()
                 count_item++;
             }
             if(y<Y-1){
-            if(data_tower[data_hero.storey][y*X+x]==1&&data_tower[data_hero.storey][(y+1)*X+x]!=1&&data_tower[data_hero.storey][(y+1)*X+x]!=21
-                    &&data_tower[data_hero.storey][(y+1)*X+x]!=23&&data_tower[data_hero.storey][(y+1)*X+x]!=25)
+            if(data_tower[data_hero.storey][y*X+x]==1&&data_tower[data_hero.storey][(y+1)*X+x]!=1/*&&data_tower[data_hero.storey][(y+1)*X+x]!=21
+                    &&data_tower[data_hero.storey][(y+1)*X+x]!=23&&data_tower[data_hero.storey][(y+1)*X+x]!=25*/)
             {pixmap_items[count_item] = new QGraphicsPixmapItem;
                 pixmap_items[count_item]->setPixmap(QPixmap::fromImage(img_wall[0]));
                 pixmap_items[count_item]->setPos(QPointF(PIXEL * x, PIXEL * y));
                 scene_storey->addItem(pixmap_items[count_item]);
                 count_item++;}
 
-            else if (data_tower[data_hero.storey][y*X+x]==1&&!(data_tower[data_hero.storey][(y+1)*X+x]!=1&&data_tower[data_hero.storey][(y+1)*X+x]!=21&&data_tower[data_hero.storey][(y+1)*X+x]!=23&&data_tower[data_hero.storey][(y+1)*X+x]!=25))
+            else if (data_tower[data_hero.storey][y*X+x]==1&&!(data_tower[data_hero.storey][(y+1)*X+x]!=1/*&&data_tower[data_hero.storey][(y+1)*X+x]!=21&&data_tower[data_hero.storey][(y+1)*X+x]!=23&&data_tower[data_hero.storey][(y+1)*X+x]!=25*/))
             {
                     pixmap_items[count_item] = new QGraphicsPixmapItem;
                         pixmap_items[count_item]->setPixmap(QPixmap::fromImage(img_wall[1]));
@@ -322,7 +324,7 @@ void gamegrapic::update_grapic()
 
             }
                 if(y>0)
-                    if(data_tower[data_hero.storey][y*X+x]==1&&data_tower[data_hero.storey][(y-1)*X+x]!=1&&data_tower[data_hero.storey][(y-1)*X+x]!=21&&data_tower[data_hero.storey][(y-1)*X+x]!=23&&data_tower[data_hero.storey][(y-1)*X+x]!=25)
+                    if(data_tower[data_hero.storey][y*X+x]==1&&data_tower[data_hero.storey][(y-1)*X+x]!=1/*&&data_tower[data_hero.storey][(y-1)*X+x]!=21&&data_tower[data_hero.storey][(y-1)*X+x]!=23&&data_tower[data_hero.storey][(y-1)*X+x]!=25*/)
                     {
                         pixmap_items[count_item] = new QGraphicsPixmapItem;
                                         pixmap_items[count_item]->setPixmap(QPixmap::fromImage(img_wall[2]));

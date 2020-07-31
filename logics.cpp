@@ -60,7 +60,8 @@ int judge_interaction(int direction)
             data_hero.pos_x = pos_target_upper % X;
             data_hero.pos_y = pos_target_upper / X;
         }
-        return GOSTAIRS;
+        return NORMAL;
+        //return GOSTAIRS;
     }else if (data_tower[data_hero.storey][pos_target] == 11)//下楼
     {
 
@@ -76,7 +77,8 @@ int judge_interaction(int direction)
             data_hero.pos_x = pos_target_lower % X;
             data_hero.pos_y = pos_target_lower / X;
         }
-        return GOSTAIRS;
+        return NORMAL;
+        //return GOSTAIRS;
     }else if (data_tower[data_hero.storey][pos_target] == 12)//触发结局一：离开。直接Game Over
     {
         var_global.no_end = 1;
@@ -106,7 +108,8 @@ int judge_interaction(int direction)
             data_hero.ykey -= 1;
             data_tower[data_hero.storey][pos_target] = 0;
         }
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 22)//尝试打开蓝门
     {
 
@@ -114,30 +117,35 @@ int judge_interaction(int direction)
             data_hero.bkey -= 1;
             data_tower[data_hero.storey][pos_target] = 0;
         }
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 23)//尝试打开红门
     {
         if (data_hero.rkey >= 1){
             data_hero.rkey -= 1;
             data_tower[data_hero.storey][pos_target] = 0;
         }
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 24)//尝试打开青门
     {
         if (var_global.status_storey2_door ==2){
             data_tower[data_hero.storey][pos_target] = 0;
         }
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 25)//尝试打开监狱门
     {
         if (var_global.status_storey8_door == 2){
             data_tower[data_hero.storey][pos_target] = 0;
         }
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 26)//打开暗门
     {
         data_tower[data_hero.storey][pos_target] = 0;
-        return OPENDOOR;
+        return NORMAL;
+        //return OPENDOOR;
     }else if (data_tower[data_hero.storey][pos_target] == 31)//获得黄钥匙
     {
         data_tower[data_hero.storey][pos_target] = 0;

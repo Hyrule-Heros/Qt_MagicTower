@@ -15,7 +15,7 @@ void init_enemy()
     data_monster[0].boss = false;
     data_monster[0].attrib = 0;
     data_monster[0].gold = 1;
-    data_monster[0].exp = 0;
+    data_monster[0].exp = 1;
     data_monster[0].img = ":/enemy/res/enemy/geernslime.png";
 
     data_monster[1].name = "红色史莱姆";
@@ -25,7 +25,7 @@ void init_enemy()
     data_monster[1].boss = false;
     data_monster[1].attrib = 0;
     data_monster[1].gold = 2;
-    data_monster[1].exp = 0;
+    data_monster[1].exp = 1;
     data_monster[1].img = ":/enemy/res/enemy/redslime.png";
 
     data_monster[2].name = "骷髅士兵";
@@ -35,7 +35,7 @@ void init_enemy()
     data_monster[2].boss = false;
     data_monster[2].attrib = 0;
     data_monster[2].gold = 8;
-    data_monster[2].exp = 0;
+    data_monster[2].exp = 2;
     data_monster[2].img = ":/enemy/res/enemy/skeletonwarrior.png";
 
     data_monster[3].name = "木乃伊";
@@ -45,7 +45,7 @@ void init_enemy()
     data_monster[3].boss = false;
     data_monster[3].attrib = 0;
     data_monster[3].gold = 6;
-    data_monster[3].exp = 0;
+    data_monster[3].exp = 1;
     data_monster[3].img = ":/enemy/res/enemy/mummy.png";
 
     data_monster[4].name = "小蝙蝠";
@@ -55,7 +55,7 @@ void init_enemy()
     data_monster[4].boss = false;
     data_monster[4].attrib = 0;
     data_monster[4].gold = 3;
-    data_monster[4].exp = 0;
+    data_monster[4].exp = 1;
     data_monster[4].img = ":/enemy/res/enemy/bat.png";
 
     data_monster[5].name = "初级法师";
@@ -65,7 +65,7 @@ void init_enemy()
     data_monster[5].boss = false;
     data_monster[5].attrib = 0;
     data_monster[5].gold = 5;
-    data_monster[5].exp = 0;
+    data_monster[5].exp = 1;
     data_monster[5].img = ":/enemy/res/enemy/wizard.png";
 
     data_monster[6].name = "中级卫兵";
@@ -75,7 +75,7 @@ void init_enemy()
     data_monster[6].boss = false;
     data_monster[6].attrib = 0;
     data_monster[6].gold = 50;
-    data_monster[6].exp = 0;
+    data_monster[6].exp = 7;
     data_monster[6].img = ":/enemy/res/enemy/eitleguard.png";
 
     data_monster[7].name = "初级卫兵";
@@ -85,7 +85,7 @@ void init_enemy()
     data_monster[7].boss = false;
     data_monster[7].attrib = 0;
     data_monster[7].gold = 12;
-    data_monster[7].exp = 0;
+    data_monster[7].exp = 1;
     data_monster[7].img = ":/enemy/res/enemy/normalguard.png";
 
     data_monster[8].name = "骷髅队长";
@@ -95,7 +95,7 @@ void init_enemy()
     data_monster[8].boss = false;
     data_monster[8].attrib = 0;
     data_monster[8].gold = 30;
-    data_monster[8].exp = 0;
+    data_monster[8].exp = 3;
     data_monster[8].img = ":/enemy/res/enemy/skeletonleader.png";
 
     data_monster[9].name = "魔法警卫";
@@ -105,7 +105,7 @@ void init_enemy()
     data_monster[9].boss = false;
     data_monster[9].attrib = 0;
     data_monster[9].gold = 100;
-    data_monster[9].exp = 0;
+    data_monster[9].exp = 5;
     data_monster[9].img = ":/enemy/res/enemy/wizardguard.png";
 
     data_monster[10].name = "假魔王";
@@ -115,7 +115,7 @@ void init_enemy()
     data_monster[10].boss = false;
     data_monster[10].attrib = 0;
     data_monster[10].gold = 0;
-    data_monster[10].exp = 0;
+    data_monster[10].exp = 9;
     data_monster[10].img = ":/enemy/res/enemy/boss.png";
 }
 
@@ -156,6 +156,22 @@ void init_tower()
     memcpy(data_tower[1], tmpfloor_2, sizeof(int) * X * Y);
 
     Storey tmpfloor_3 = {
+            1,1,1,1,1,1,1,1,1,1,1,1,1,
+            1,31, 37, 1, 31, 35, 31, 1, 0, 1, 0, 35,1,
+            1,0, 34, 1, 35, 31, 35, 1, 0, 21, 55, 0,1,
+            1,56, 0, 1, 31, 32, 31, 1, 0, 1, 1, 1,1,
+            1,21, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0,1,
+            1,0, 0, 55, 0, 0, 0, 51, 0, 0, 0, 0,1,
+            1,21, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1,1,
+            1,54, 0, 1, 1, 0, 1, 1, 0, 1, 0, 34,1,
+            1,0, 31, 1, 0, 0, 0, 1, 0, 21, 56, 31,1,
+            1,34, 36, 1, 0, 0, 0, 1, 0, 1, 1, 1,1,
+            1,1, 1, 1, 1, 0, 1, 1, 52, 1, 0, 0,1,
+            1,11, 0, 0, 0, 0, 0, 1, 0, 21, 0, 10,1,
+            1,1,1,1,1,1,1,1,1,1,1,1,1,
+        };
+    memcpy(data_tower[2], tmpfloor_3, sizeof(int) * X * Y);
+    /*Storey tmpfloor_3 = {
         1,1,1,1,1,1,1,1,1,1,1,1,1,
         1,31, 37, 1, 31, 35, 31, 1, 0, 1, 0, 35,1,
         1,0, 34, 1, 35, 31, 35, 1, 0, 21, 55, 0,1,
@@ -170,7 +186,7 @@ void init_tower()
         1,11, 0, 0, 0, 0, 0, 1, 0, 21, 0, 10,1,
         1,1,1,1,1,1,1,1,1,1,1,1,1,
     };
-    memcpy(data_tower[2], tmpfloor_3, sizeof(int) * X * Y);
+    memcpy(data_tower[2], tmpfloor_3, sizeof(int) * X * Y);*/
 
     Storey tmpfloor_4 = {
         1,1,1,1,1,1,1,1,1,1,1,1,1,

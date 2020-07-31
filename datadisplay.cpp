@@ -25,31 +25,47 @@ void datadisplay::update_datadisplay()
     ui->data_rkey->setText(QString::number(data_hero.rkey));
     ui->data_coin->setText(QString::number(data_hero.gold));
     ui->data_bkey->setText(QString::number(data_hero.bkey));
-    switch (data_hero.storey)
+    if(data_hero.storey==0)
     {
-        case(0):
-        ui->data_storey->setText(QString("第一层"));
-        case(1):
-        ui->data_storey->setText(QString("第二层"));
-        case(2):
-        ui->data_storey->setText(QString("第三层"));
-        case(3):
-        ui->data_storey->setText(QString("第四层"));
-        case(4):
-        ui->data_storey->setText(QString("第五层"));
-        case(5):
-        ui->data_storey->setText(QString("第六层"));
-        case(6):
-        ui->data_storey->setText(QString("第七层"));
-        case(7):
-        ui->data_storey->setText(QString("第八层"));
-        case(8):
-        ui->data_storey->setText(QString("第九层"));
-        case(9):
-        ui->data_storey->setText(QString("第十层"));
-    default:
         ui->data_storey->setText(QString("第一层"));
     }
+    else if(data_hero.storey==1)
+    {
+        ui->data_storey->setText(QString("第二层"));
+    }
+    else if(data_hero.storey==2)
+    {
+        ui->data_storey->setText(QString("第三层"));
+    }
+    else if(data_hero.storey==3)
+    {
+        ui->data_storey->setText(QString("第四层"));
+    }
+    else if(data_hero.storey==4)
+    {
+        ui->data_storey->setText(QString("第五层"));
+    }
+    else if(data_hero.storey==5)
+    {
+        ui->data_storey->setText(QString("第六层"));
+    }
+    else if(data_hero.storey==6)
+    {
+        ui->data_storey->setText(QString("第七层"));
+    }
+    else if(data_hero.storey==7)
+    {
+        ui->data_storey->setText(QString("第八层"));
+    }
+    else if(data_hero.storey==8)
+    {
+        ui->data_storey->setText(QString("第九层"));
+    }
+    else if(data_hero.storey==9)
+    {
+        ui->data_storey->setText(QString("第十层"));
+    }
+
 }
 
 void datadisplay::init_datadisplay()
